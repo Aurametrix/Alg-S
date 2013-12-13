@@ -10,3 +10,32 @@ def msort[A](less: (A, A) => Boolean)(xs: List[A]): List[A] = {
 }
 
 msort((x: Int, y: Int) => x < y)(List(5, 7, 1, 3))
+
+/** Tbelow is another example of merge sort
+  *
+  * Above is from http://www.scala-lang.org/docu/files/ScalaByExample.pdf
+  */
+
+
+object MergeSort {
+  def merge(xs: List[Int], ys: List[Int], res: List[Int]): List[Int] =
+    (xs, ys) match {
+      case (Nil, ys) => res.reverse ++ ys
+      case (xs, Nil) => res.reverse ++ xs
+      case (x :: xs1, y :: ys1) =>
+        if (x < y) merge(xs1, ys, x :: res)
+        else merge(xs, ys1, y :: res)
+    }
+ 
+  def apply(xs: List[Int]): List[Int] = {
+    val n = xs.length / 2
+    if (n == 0)
+      xs
+    else {
+      val (left, right) = xs splitAt (n)
+      merge(apply(left), apply(right), Nil)
+    }
+  }
+}
+
+MergeSort((x: Int, y: Int) => x < y)(List(5, 7, 1, 3))
