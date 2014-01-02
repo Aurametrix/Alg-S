@@ -21,3 +21,11 @@ $ scala mycode.scala
 Execute commands in the Scala interpreter, using the option -e:
 
 $ scala -e 'println("Hello, World!")'
+
+
+To compile and run on Windows one of the above Scala programs, let's say sort.scala, we can simply proceed as follows:
+> mkdir classes
+> scalac -d classes %SCALA_HOME%\doc\scala-devel-docs\scala\examples\sort.scala
+> scala -cp classes examples.sort
+[6,2,8,5,1]
+[1,2,5,6,8]
