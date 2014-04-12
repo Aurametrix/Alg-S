@@ -1,3 +1,11 @@
+/**
+  * ask for a filename, read the file that has 1 word per line
+  * remove line ends such as cr, lf or crlf
+  * lowercase the word, increment count
+  * print out each word, sorted alphabetically, and its count
+  */
+
+
 import io.Source
 import java.io.FileNotFoundException
 
