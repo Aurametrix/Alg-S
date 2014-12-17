@@ -1,0 +1,23 @@
+The default database mapping tool that Play 2 uses is Anorm (Anorm is Not an Object Relational Mapper).
+
+Executing SQL queries in Anorm:
+
+First, import anorm._, and then simply use the SQL object to create queries. You need a Connection to run a query, and you can retrieve one from the play.api.db.DB helper:
+
+import anorm._ 
+import play.api.db.DB
+
+DB.withConnection { implicit c =>
+  val result: Boolean = SQL("Select 1").execute()    
+} 
+
+The execute() method returns a Boolean value indicating whether the execution was successful.
+
+To execute an update, you can use executeUpdate(), which returns the number of rows updated.
+
+val result: Int = SQL("delete from City where id = 99").executeUpdate()
+
+If you are inserting data that has an auto-generated Long primary key, you can call executeInsert(). If you have more than one generated key, or it is not a Long, executeInsert can be passed a ResultSetParser to return the correct key.
+
+val id: Option[Long] = SQL("insert into City(name, country) values ({name}, {country})")
+              .on("Cambridge", "New Zealand").executeInsert()
