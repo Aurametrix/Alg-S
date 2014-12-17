@@ -1,0 +1,47 @@
+-- create a new project
+play new mynewapp
+
+dit the project/Build.scala file and update the dependencies:
+
+val appDependencies = Seq(
+  "org.squeryl" %% "squeryl" % "0.9.5-2",
+  "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+)
+
+To setup Play to use that database, edit the conf/application.conf file and uncomment or add the following lines:
+
+db.default.driver=org.h2.Driver
+db.default.url="jdbc:h2:mem:play"
+
+
+Create a new file named app/Global.scala containing:
+
+import org.squeryl.adapters.{H2Adapter, PostgreSqlAdapter}
+import org.squeryl.internals.DatabaseAdapter
+import org.squeryl.{Session, SessionFactory}
+import play.api.db.DB
+import play.api.GlobalSettings
+
+import play.api.Application
+
+object Global extends GlobalSettings {
+
+  override def onStart(app: Application) {
+    SessionFactory.concreteFactory = app.configuration.getString("db.default.driver") match {
+      case Some("org.h2.Driver") => Some(() => getSession(new H2Adapter, app))
+      case Some("org.postgresql.Driver") => Some(() => getSession(new PostgreSqlAdapter, app))
+      case _ => sys.error("Database driver must be either org.h2.Driver or org.postgresql.Driver")
+    }
+  }
+
+  def getSession(adapter:DatabaseAdapter, app: Application) = Session.create(DB.getConnection()(app), adapter)
+
+}
+
+
+On application startup the db.default.driver configuration parameter will be used to determine which driver to use to setup the database connection. A new connection will be made and stored in Squeryl's SessionFactory.
+
+If you reload the http://localhost:9000 webpage in your browser, everything should still be working and you should see the following message in the Play STDOUT log:
+
+[info] play - database [default] connected at jdbc:h2:mem:play
+
