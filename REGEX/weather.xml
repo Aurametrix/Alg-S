@@ -1,0 +1,13 @@
+val weather = <rss>
+<channel>
+<title>Yahoo! Weather - Boulder, CO</title>
+<item>
+<!-- multiple yweather:forecast elements -->
+<forecast day="Thu" date="10 Nov 2011" low="37" high="58"
+              text="Partly Cloudy" code="29" />
+<forecast day="Fri" date="11 Nov 2011" low="39" high="58"
+              text="Mostly Cloudy" code="28" />
+<forecast day="Sat" date="12 Nov 2011" low="32" high="49" text="Cloudy" code="27" />
+</item>
+</channel>
+</rss>
