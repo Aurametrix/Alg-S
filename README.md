@@ -1,7 +1,11 @@
 Alg-S
 =====
 
-Scala, object-functional programming and scripting language
+Scala, object-functional programming and scripting language, a child of Ruby and Java. Runs on JVM. 
+Pure object-oriented programming (OOP) language (every variable is an object, and every “operator” is a method). 
+Functional programming (FP) language (can pass functions around as variables))
+Powers Twitter, Netflix, Tumblr (Yahoo), Linkedin, Foursquare, Quora, Box.com, Coursera ... 
+
 
 Download:
 http://www.scala-lang.org/download/
@@ -29,3 +33,20 @@ To compile and run on Windows one of the above Scala programs, let's say sort.sc
 > scala -cp classes examples.sort
 [6,2,8,5,1]
 [1,2,5,6,8]
+
+Algorithm samples
+https://code.google.com/p/scalgorithms/
+
+http://www.scala-lang.org/old/node/219
+
+http://fulloo.info/Examples/ScalaExamples/Dijkstra/Dijkstra.html
+
+Github:
+https://github.com/scala
+First commit:
+https://github.com/scala/scala/commit/e566ca34a3fd246a4535c458ae47ff7ea62e2de7
+
+
+Books:
+http://alvinalexander.com/scala/scala-cookbook-preface-original
+
