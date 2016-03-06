@@ -1,4 +1,4 @@
-99 to 1 by -1 foreach { n =>
+(99 to 1 by -1).par foreach { n =>
   println(
     f"$n%d bottles of beer on the wall\n" +
       f"$n%d bottles of beer\n" +
