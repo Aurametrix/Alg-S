@@ -35,11 +35,14 @@ To compile and run on Windows one of the above Scala programs, let's say sort.sc
 [1,2,5,6,8]
 
 Algorithm samples
-https://code.google.com/p/scalgorithms/
+
+[Google](https://code.google.com/p/scalgorithms/)
 
 http://www.scala-lang.org/old/node/219
 
-http://fulloo.info/Examples/ScalaExamples/Dijkstra/Dijkstra.html
+[DCI: Data, Context and Interaction](http://fulloo.info/Examples/ScalaExamples/)
+
+[Changing syntax](https://news.ycombinator.com/item?id=14388242)
 
 Github:
 https://github.com/scala
