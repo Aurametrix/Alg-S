@@ -52,6 +52,10 @@ https://github.com/scala/scala/commit/e566ca34a3fd246a4535c458ae47ff7ea62e2de7
 
 [Ammonite - Scala for scripting purposes](http://www.lihaoyi.com/Ammonite/)
 
+[Scalameta - a meta-programming toolkit ](http://scalameta.org/)
+
+[](http://astexplorer.net)
+
 Books:
 http://alvinalexander.com/scala/scala-cookbook-preface-original
 
