@@ -38,6 +38,10 @@ Algorithm samples
 
 [Google](https://code.google.com/p/scalgorithms/)
 
+
++ [Towards Scala 3](http://www.scala-lang.org/blog/2018/04/19/scala-3.html)
++ [Scala 3](https://github.com/lampepfl/dotty.)
+
 http://www.scala-lang.org/old/node/219
 
 [DCI: Data, Context and Interaction](http://fulloo.info/Examples/ScalaExamples/)
