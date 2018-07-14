@@ -6,6 +6,7 @@ Pure object-oriented programming (OOP) language (every variable is an object, an
 Functional programming (FP) language (can pass functions around as variables))
 Powers Twitter, Netflix, Tumblr (Yahoo), Linkedin, Foursquare, Quora, Box.com, Coursera ... 
 
+compare to [Edison](https://www.egison.org/)
 
 Download:
 http://www.scala-lang.org/download/
