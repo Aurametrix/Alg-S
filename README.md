@@ -64,3 +64,8 @@ https://github.com/scala/scala/commit/e566ca34a3fd246a4535c458ae47ff7ea62e2de7
 Books:
 http://alvinalexander.com/scala/scala-cookbook-preface-original
 
+#### Interesting Projects / Libraries
+
+[JsonSql](https://github.com/mmalek06/JsonSql) - library to query json documents using SQL syntax
+
+
